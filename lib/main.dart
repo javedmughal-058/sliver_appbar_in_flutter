@@ -42,19 +42,22 @@ class _MyHomePageState extends State<MyHomePage> {
               snap: _snap,
               floating: _floating,
               expandedHeight: 160.0,
-              title: const Text('Welcome'),
+              title: const Text('Welcome', style: TextStyle(fontSize: 16, color: Colors.grey),),
+              actions: [
+                IconButton(
+                  
+                    onPressed: (){}, icon: const Icon(Icons.settings))
+              ],
               flexibleSpace: const FlexibleSpaceBar(
                 centerTitle: true,
                 title: Text('Muhammad Javed'),
+                expandedTitleScale: 1.6,
                 // background: FlutterLogo(),
               ),
             ),
             const SliverToBoxAdapter(
-              child: SizedBox(
-                height: 20,
-                child: Center(
-                  child: Text('Scroll to see the SliverAppBar in effect.'),
-                ),
+              child: Center(
+                child: Text('Scroll down to see the SliverAppBar functionality.'),
               ),
             ),
             SliverList(
