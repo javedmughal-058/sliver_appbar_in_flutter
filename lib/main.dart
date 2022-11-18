@@ -42,10 +42,11 @@ class _MyHomePageState extends State<MyHomePage> {
               snap: _snap,
               floating: _floating,
               expandedHeight: 160.0,
-              title: const Text('Welcome', style: TextStyle(fontSize: 16, color: Colors.grey),),
+              title: const Text('Welcome', style: TextStyle(fontSize: 16, color: Colors.black54),),
               actions: [
                 IconButton(
-                  
+                    highlightColor: Colors.amber,
+                    focusColor: Colors.deepOrangeAccent,
                     onPressed: (){}, icon: const Icon(Icons.settings))
               ],
               flexibleSpace: const FlexibleSpaceBar(
@@ -64,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
               delegate: SliverChildBuilderDelegate(
                     (BuildContext context, int index) {
                   return Container(
-                    color: index.isOdd ? Colors.white : Colors.black12,
+                    color: index.isEven ? Colors.amber.withOpacity(0.2) : Colors.teal.withOpacity(0.1),
                     height: 100.0,
                     child: Center(
                       child: Text('$index', textScaleFactor: 5),
